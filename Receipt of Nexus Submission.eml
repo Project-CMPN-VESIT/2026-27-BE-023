@@ -1,0 +1,94 @@
+Delivered-To: 2023.akshhad.ahuja@ves.ac.in
+Received: by 2002:a05:693c:87c5:10b0:381:cd4:d7bd with SMTP id j5-n1csp306646dyv;
+        Wed, 18 Nov 2026 06:16:36 -0800 (PST)
+X-Received: by 2002:a05:6808:244d:b0:571:d883:d55a with SMTP id 5614622812f47-575df3018b6mr4403757b6e.34.1795011395422;
+        Wed, 18 Nov 2026 06:16:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1795011395; cv=none;
+        d=google.com; s=arc-20260327;
+        b=jMfG/PeEtQ7O1NNp0ZgcY56/dPLPrRh2cyzF8HBAeVVlanmwG2SAAGydhNlVdTmkuy
+         OPJ4pWNUQNhwchfFxpVbkBgS31RufCuT4+5xtfN0wg1dOV6Gcejhcv2tO9ypWhq2KsWT
+         Zy9po/ErlXCBrjoWsdg6L+nR1kUPhnbIYyiZaJgs8YRrhte2NDXb/6WSngwgEORmmar3
+         +BFSTHQCeLIq8sGRRaPMVA6YvHVw+PQ9zPz2XVBF7joMML0ahWFg0bJ0w/sYE+wy/vF6
+         t9ia/UQE6z/9FiZ2aXJnOO4IiziIULZju/w4lei1WQXorvOdE4VVBfVoApVjiSDUKG6D
+         SP/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=feedback-id:message-id:content-transfer-encoding:mime-version:date
+         :subject:to:reply-to:from:sender:dkim-signature:dkim-signature;
+        bh=HgXiFrzohHmeljfoi3nBIGrUL2oEEbN7XTbSdv+iiEY=;
+        fh=Qq7D0w+zq0En5+iGM4HgHegjNjsEdUOy1sV0dCUWSEM=;
+        b=EMBjhGw/sejaZS+0PTKL/GfmK7jPsPLjnbdWYbM9MwWAR/ZHXkxZ9A9dflJo4HHnYG
+         wrsBHoxTjEpxKUExwl0cF7WnAhB9Rbu3EITjFhIMDv6aVfjMlJ/953fBbZjFGaqRDBer
+         wI1YB4QroomBDhbkcflQxemFWqbzrrSWbnAy7KiS0aQ4B9r1ZCMEMk5982dnpCnF5W4I
+         ZdWgvqEybC8DOfE9H0AMfJrqqvSWSP/D67g7NmF+9bXfzzHrUW/jrT5pRIDH7JqxOM6b
+         8YMBg0lctwrkBCu7PoUBcVfmCvXOwN2RBcaxcq72R6qLsU9JXhvO5+OmrmNV3NJd09Ab
+         /zAw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@editorialmanager.com header.s=tvdfymwwvsvl5knqfes5kclzda4ayx6m header.b=dZ6NyWyZ;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=UhM1mZ08;
+       spf=pass (google.com: domain of 010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com designates 54.240.115.15 as permitted sender) smtp.mailfrom=010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=editorialmanager.com
+Return-Path: <010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com>
+Received: from a115-15.smtp-out.us-east-2.amazonses.com (a115-15.smtp-out.us-east-2.amazonses.com. [54.240.115.15])
+        by mx.google.com with ESMTPS id 586e51a60fabf-4b74540a329si3626932fac.133.2026.11.18.06.16.35
+        for <2023.akshhad.ahuja@ves.ac.in>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 18 Nov 2026 06:16:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com designates 54.240.115.15 as permitted sender) client-ip=54.240.115.15;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@editorialmanager.com header.s=tvdfymwwvsvl5knqfes5kclzda4ayx6m header.b=dZ6NyWyZ;
+       dkim=pass header.i=@amazonses.com header.s=kra23psoka5qyyh6gdejiiuof3nluwuz header.b=UhM1mZ08;
+       spf=pass (google.com: domain of 010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com designates 54.240.115.15 as permitted sender) smtp.mailfrom=010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@mail.editorialmanager.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=editorialmanager.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=tvdfymwwvsvl5knqfes5kclzda4ayx6m; d=editorialmanager.com;
+	t=1795011394;
+	h=Sender:From:Reply-To:To:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	bh=3xlRHtUYZA8ZJPiMhLZokjneGDP/c+Vv+mlxmIEu8gs=;
+	b=dZ6NyWyZ7GV0i4hMbHaCKTFlpGOkup3TPEJPqi+kkisiwMi2WGDPkhEALREEbUog
+	xhbxINVw5Q9KFyNX8UNaWPa32SIfLDajkMnAfiS0nYsLCrxdzsMrFAy04/gw+NlADnT
+	ebvuiKTQsCUP9+mSi9o7iRCtn1gsUiQUww14zTlZHo0Dw8RmQgPg0UB9imnuQbdfPYl
+	KOJMtSCywIkIZgFxLAGzXmFxt4iYqUPQz1R0f6pjpDF5XgwugGcNrAvg72K9Or53uaz
+	/qqo3RuZU4v9ZEA2yp+dohkmK/jm/HN1Gs3barV36faZUN++9h/YDBZg+tv4k4bJqKk
+	fzwA1XZJFw==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=kra23psoka5qyyh6gdejiiuof3nluwuz; d=amazonses.com; t=1795011394;
+	h=Sender:From:Reply-To:To:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Feedback-ID;
+	bh=3xlRHtUYZA8ZJPiMhLZokjneGDP/c+Vv+mlxmIEu8gs=;
+	b=UhM1mZ08dgtzd2YVuj/Iyujd8UydF941Abu7ZzngFwkMT5oKbIFWBRSBg1AuRxEp
+	mf9wdDtqIw8vLXzNy7mql55+qvRgLhr9ZtLtbm30O9LB3qhZ3NcuDLmQ7Q4/YTrlU/B
+	/qk/d7rd2z024mfa/sOXTmxyZicLft7KTtaK2+Jw=
+Sender: em.nexus-journal.0.9f8b12.9136dabe@editorialmanager.com
+From: Nexus <em@editorialmanager.com>
+Reply-To: Nexus <nexus.polyu@polyu.edu.hk>
+To: AKSHHAD AHUJA <2023.akshhad.ahuja@ves.ac.in>
+Subject: Receipt of Nexus Submission
+Date: Wed, 18 Nov 2026 14:16:34 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000@us-east-2.amazonses.com>
+Feedback-ID: ::1.us-east-2.cfEymE50DmvakymQX9ZrPi9nu6QsNLbJaZEYfDsv68A=:AmazonSES
+X-SES-Outgoing: 2026.11.18-54.240.115.15
+
+<html><body><p>Dear Dr. AHUJA:</p><p>Thank you submitting your manuscript e=
+ntitled &quot;Smart inventory management with AI: machine-learning demand f=
+orecasting and stock optimization for small retailers&quot; to Nexus. The p=
+aper has now been forwarded to the editors. Please note the manuscript numb=
+er NEXUS-JOURNAL-D-26-01068 and make sure you note this number in any furth=
+er correspondence with us regarding the paper.</p><p>You can check the stat=
+us of your paper at any time by logging back into the editorial system.</p>=
+<p>Kind regards,</p><p><br />, Nexus<br /><img src=3D"https://www.editorial=
+manager.com/nexus-journal/download.aspx?scheme=3D4&id=3D6" /></p><br/><br/>=
+<hr/><span style=3D"font-style: italic; font-size: 90%;">In compliance with=
+ data protection regulations, you may request that we remove your personal =
+registration details at any time.  <a href=3D"https://track.editorialmanage=
+r.com/CL0/https:%2F%2Fwww.editorialmanager.com%2Fnexus-journal%2Flogin.asp%=
+3Fa=3Dr/1/010f01a1ef043c17-ee1e66e0-5e50-494b-b247-498c96147863-000000/Zw69=
+mW5297wQChXzrmADOXIRyi5nqZvg-VyCdFj_tdY=3D258">(Remove my information/detai=
+ls)</a>. Please contact the
+publication office if you have any questions.</span><img alt=3D"" src=3D"ht=
+tp://track.editorialmanager.com/CI0/010f01a1ef043c17-ee1e66e0-5e50-494b-b24=
+7-498c96147863-000000/Idaiz3J_0QqN-MrZ_bVOdGkVFauA6zCZQA1gT9ZGCyo=3D258" st=
+yle=3D"display: none; width: 1px; height: 1px;">
+</body></html>
